@@ -42,7 +42,7 @@ cron.schedule("* * 1 * *", async function() {
             }
         ]
     })
-    mailer.setApiKey("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");
+    mailer.setApiKey(process.env.API_key);
 
     // for (let i=0; i<=emp.length; i++) {
 
