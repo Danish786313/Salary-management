@@ -1,0 +1,24 @@
+npx sequelize-cli model:generate --name employee --attributes name:string,email:string,mobile:integer,address:string,basesalary:float
+
+npx sequelize-cli model:generate --name salary --attributes employee:integer,salary:date,total_working_days:integer,total_leave_taken:integer,overtime:date,total_salary_made:float,Is_salary_calculated:boolean
+
+npx sequelize-cli model:generate --name salarie --attributes employee_id:integer,month:enum:'{January,February,March,April,May,June,July,August,September,October,November,December}',year:date,total_working_days:integer,total_leave_taken:integer,overtime:date,total_salary_made:float,Is_salary_calculated:boolean
+
+https://www.creative-tim.com/templates/free
+
+https://adminlte.io/themes/v3/index3.html
+
+
+    const salary_date_now = new Date(req.body.date)
+    console.log(salary_date_now.getMonth() + 1)
+    console.log(salary_date_now.getFullYear())
+    
+    const salary = await salarie.findAll()
+    let salary_date_lmonth = new Date(salary[0].date)
+    console.log(salary_date_lmonth.getMonth()+1)
+    console.log(salary_date_lmonth.getFullYear())
+
+    const date = new Date()
+    console.log(date.getFullYear())
+
+
